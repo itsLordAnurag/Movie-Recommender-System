@@ -1,0 +1,9 @@
+config.json
+myenv/
+__pycache__/
+.env
+cosine_sim.pkl
+df_cleaned.pkl
+preprocess.log
+tfidf_matrix.pkl
+recommend.log

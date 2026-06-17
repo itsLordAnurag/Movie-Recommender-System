@@ -2,12 +2,17 @@ import json
 import streamlit as st
 from recommend import df, recommend_movies
 from omdb_utils import get_movie_details
+import os
+from dotenv import load_dotenv
 
+load_dotenv()
 
-config = json.load(open("config.json"))
+OMDB_API_KEY = os.getenv("OMDB_API_KEY")
 
-# OMDB api key
-OMDB_API_KEY = config["OMDB_API_KEY"]
+# config = json.load(open("config.json"))
+
+# # OMDB api key
+# OMDB_API_KEY = config["OMDB_API_KEY"]
 
 st.set_page_config(
     page_title="Movie Recommender",
